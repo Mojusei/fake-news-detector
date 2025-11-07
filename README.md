@@ -10,7 +10,7 @@
 Борьба с дезинформацией с помощью классических методов NLP:  
 - **TfidfVectorizer** для извлечения признаков  
 - **PassiveAggressiveClassifier** для обучения  
-- Точность на тестовой выборке: **>94%**
+- Точность на тестовой выборке: **>90%**
 
 ---
 
@@ -30,9 +30,13 @@
 
 ![Confusion Matrix](reports/confusion_matrix.png)
 
-- **Classification Report**:
+- **Сравнение метрик по классам**:
 
-![Classification Report](reports/classification_report.png)
+![Classification Report](reports/general_classification.png)
+
+- **ROC-кривая**:
+
+![ROC Curve](reports/roc_curve.png)
 
 ---
 
@@ -40,7 +44,7 @@
 
 ### 1. Клонировать и перейти в проект
 ```bash
-git clone https://github.com/mojusei/fake-news-detector.git
+git clone https://github.com/Mojusei/fake-news-detector.git
 cd fake-news-detector
 ```
 
