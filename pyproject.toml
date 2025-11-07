@@ -1,0 +1,39 @@
+[project]
+name = "fake-news-detector"
+version = "0.9.0"
+description = ""
+authors = [
+    {name = "Mojusei",email = "metra9991@mail.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.3.3,<3.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)",
+    "matplotlib (>=3.10.7,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "joblib (>=1.5.2,<2.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=7.1.0,<8.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "fake-news-detector"
+version = "0.1.0"
+description = ""
+authors = ["Mojusei <metra9991@mail.ru>"]
+
+packages = [
+    { include = "src" }
+]
+
+scripts = { fake-news-predict = "src.predict:main_cli" }
