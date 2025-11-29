@@ -1,6 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
-from src.config import TFIDF_PARAMS, MODEL_PARAMS
+from config.globals import TFIDF_PARAMS, MODEL_PARAMS
+
 
 class FakeNewsClassifier:
     def __init__(self):

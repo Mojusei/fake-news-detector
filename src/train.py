@@ -1,7 +1,8 @@
 import joblib
 from src.data import load_data, clean_data, get_train_test_split
 from src.model import FakeNewsClassifier
-from src.config import MODEL_DIR
+from config.paths import MODEL_DIR
+
 
 def main():
     print("Загрузка данных...")
@@ -16,6 +17,7 @@ def main():
     joblib.dump(model.vectorizer, MODEL_DIR / "tfidf_vectorizer.pkl")
 
     print(f"Модель и векторизатор сохранены в: {MODEL_DIR}")
+
 
 if __name__ == "__main__":
     main()

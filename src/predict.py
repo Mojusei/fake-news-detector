@@ -1,7 +1,7 @@
 import sys
 import joblib
 from pathlib import Path
-from src.config import MODEL_DIR
+from config.paths import MODEL_DIR
 
 # Добавляем корень проекта в sys.path для запуска напрямую
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
@@ -33,7 +33,7 @@ def main_cli():
         print('Неверное количество аргументов')
         print('Используйте: fake-news-predict \"Текст новости\"')
         sys.exit(1)
-    
+
     news_text = sys.argv[1]
     try:
         result = predict_news(news_text)

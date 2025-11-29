@@ -11,8 +11,8 @@ def load_data():
         print('Датасет успешно загружен')
         return df
     except Exception as e:
-        raise ValueError('Ошибка: {e}')
-    
+        raise ValueError(f'Ошибка: {e}')
+
 
 def clean_data(df):
     """Обрабатывает данные"""
@@ -24,4 +24,6 @@ def clean_data(df):
 def get_train_test_split(df, test_size=0.2, random_state=42):
     """Разделяет данные на train/test с сохранением баланса."""
     X, y = df['text'], df['label']
-    return train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
+    return train_test_split(
+        X, y, test_size=test_size, random_state=random_state, stratify=y
+        )
